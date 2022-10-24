@@ -111,3 +111,16 @@ Mac OS -
     qtum-cli.exe --regtest --rpcuser=username --rpcpassword=password --rpcport=13889
 
 generatetoaddress 1 qN1ipWSFoEhKbigPUcirHxpTbehkpWiiM6
+
+3. Check whether the transaction is confirmed using gettransaction:
+Windows OS -
+
+    qtum-cli.exe --regtest --rpcuser=username --rpcpassword=password --rpcport=13889
+
+gettransaction INSERT_TRANSACTION_ID
+
+Mac OS -
+
+    ./qtum-cli --regtest --rpcuser=username --rpcpassword=password --rpcport=13889 gettransaction
+
+INSERT_TRANSACTION_ID
