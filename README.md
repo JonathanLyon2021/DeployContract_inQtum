@@ -80,3 +80,34 @@ generatetoaddress 600 qN1ipWSFoEhKbigPUcirHxpTbehkpWiiM6
 qtum-cli.exe --regtest --rpcuser=username --rpcpassword=password --rpcport=13889 getwalletinfo
 ./qtum-cli --regtest
 
+3. Deploy Contract
+1. To deploy the contract, call createcontract with the bytecode found in your workspace folder named:
+SimpleStorage_sol_SimpleStorage.bin
+Windows OS -
+        qtum-cli.exe --regtest --rpcuser=username --rpcpassword=password --rpcport=13889
+
+createcontract 6080604052348015610011576000600...
+Mac OS -
+        ./qtum-cli --regtest --rpcuser=username --rpcpassword=password --rpcport=13889
+
+createcontract 6080604052348015610011576000600...
+
+The result of this command is a JSON, storing the transaction hash, sender address, hash160 and the
+address of the contract
+
+At this point, save the following as we will use them later:
+• tx_id - The transaction ID
+• sender - The contract creator
+• address - The contract address
+2. Mine one block:
+Windows OS -
+
+        qtum-cli.exe --regtest --rpcuser=username --rpcpassword=password --rpcport=13889
+
+generatetoaddress 1 qN1ipWSFoEhKbigPUcirHxpTbehkpWiiM6
+
+Mac OS -
+
+    qtum-cli.exe --regtest --rpcuser=username --rpcpassword=password --rpcport=13889
+
+generatetoaddress 1 qN1ipWSFoEhKbigPUcirHxpTbehkpWiiM6
