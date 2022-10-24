@@ -54,7 +54,7 @@ Remember not to close this terminal for the rest of the activity.
 during testing. To generate an account, launch a new terminal on the same location and interact with the
 daemon using qtum-cli with the following command:
 
-**Windows OS - **
+**Windows OS -**
     
     qtum-cli.exe --regtest --rpcuser=username --rpcpassword=password --rpcport=13889 getnewaddress
     
@@ -85,7 +85,7 @@ generatetoaddress 600 qN1ipWSFoEhKbigPUcirHxpTbehkpWiiM6
 
     qtum-cli.exe --regtest --rpcuser=username --rpcpassword=password --rpcport=13889 getwalletinfo
     
-**Mac OS - **
+**Mac OS -**
 
     ./qtum-cli --regtest
 
@@ -138,7 +138,7 @@ gettransaction INSERT_TRANSACTION_ID
 INSERT_TRANSACTION_ID
 
 -4. Check what is behind the address of the contract using getaccountinfo1
-**Windows OS- **
+**Windows OS -**
 
     qtum-cli.exe --regtest --rpcuser=username --rpcpassword=password --rpcport=13889
 
