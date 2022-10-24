@@ -58,3 +58,25 @@ Windows OS-
 Mac OS
     
     ./qtum-cli --regtest --rpcuser=username --rpcpassword=password --rpcport=13889 getnewaddress
+    
+5. Get test QTUMs. The command is: generatetoaddress 600 your_generated_address
+This will mine 600 blocks and the block reward will go to the specified address.
+Note: This command may take some time as qtum-core mines new blocks.
+If you examine the qtumd.exe terminal, you’ll see the mining process happening.
+
+Windows OS -
+         
+         qtum-cli.exe --regtest --rpcuser=username --rpcpassword=password --rpcport=13889
+
+generatetoaddress 600 qN1ipWSFoEhKbigPUcirHxpTbehkpWiiM6
+  
+  Mac OS -
+  
+    ./qtum-cli --regtest --rpcuser=username --rpcpassword=password --rpcport=13889
+    
+generatetoaddress 600 qN1ipWSFoEhKbigPUcirHxpTbehkpWiiM6
+
+6. To check the wallet's address and current balance, type getwalletinfo
+qtum-cli.exe --regtest --rpcuser=username --rpcpassword=password --rpcport=13889 getwalletinfo
+./qtum-cli --regtest
+
