@@ -13,3 +13,48 @@ Throughout the project, we will use:
 • QWeb3 v1.2.2
 • NodeJS v13.5.0
 • NPM v6.13.4
+
+# Commands
+
+# 1. Generate Bytecode and ABI
+1. Create a folder on your preferred location. From this point onwards, we will refer to this as your workspace.
+2. Implement a simple storage contract:
+
+Install solc if you don’t have it, yet. Don’t forget to run the command as an administrator.
+
+    npm install -g solc@0.6.4
+    
+Compile the contract. This will generate the bytecode and ABI files on your workspace.
+
+    solcjs SimpleStorage.sol --bin --abi
+    
+# 2. Run Qtum regtest
+- 1. Download Qtum 0.19.0.1 from this github repository:
+https://github.com/qtumproject/qtum/releases/tag/mainnet-ignition-v0.19.0
+It’s more convenient to download the zip file for your platform.
+
+- 2. Extract the archive on your workspace and open up a new terminal on that location.
+a. For MacOS users, run the following command to extract the archive:
+
+    tar xvzf qtum-0.19.0.1-osx64.tar.gz
+
+- 3. Go to the bin folder and run the qtum daemon on regtest mode with username, password and port.
+If you want, you can set your data directory to point at your desired location.
+Remember not to close this terminal for the rest of the activity.
+
+Windows OS -
+       qtumd.exe --regtest --datadir=. --rpcuser=username --rpcpassword=password --rpcport=13889
+       
+Mac OS -
+      ./qtumd --regtest --datadir=. --rpcuser=username --rpcpassword=password --rpcport=13889
+
+- 4. The Qtum regtest mode provides the option to generate blocks in order to speed up the process using PoW
+during testing. To generate an account, launch a new terminal on the same location and interact with the
+daemon using qtum-cli with the following command:
+
+Windows OS- 
+    qtum-cli.exe --regtest --rpcuser=username --rpcpassword=password --rpcport=13889 getnewaddress
+    
+Mac OS
+    
+    ./qtum-cli --regtest --rpcuser=username --rpcpassword=password --rpcport=13889 getnewaddress
