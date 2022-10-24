@@ -124,3 +124,15 @@ Mac OS -
     ./qtum-cli --regtest --rpcuser=username --rpcpassword=password --rpcport=13889 gettransaction
 
 INSERT_TRANSACTION_ID
+
+-4. Check what is behind the address of the contract using getaccountinfo1
+Windows OS- 
+
+    qtum-cli.exe --regtest --rpcuser=username --rpcpassword=password --rpcport=13889
+
+getaccountinfo INSERT_CONTRACT_ADDRESS
+
+Mac OS -
+        ./qtum-cli --regtest --rpcuser=username --rpcpassword=password --rpcport=13889 getaccountinfo
+
+INSERT_CONTRACT_ADDRESS
