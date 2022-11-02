@@ -7,5 +7,8 @@ contract SimpleStorage {
         function set(uint data) public {
         storedData = data;
     }
-   
+    
+        function get() public view returns(uint data) {
+        return storedData;
+    }
 }
