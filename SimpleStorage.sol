@@ -3,6 +3,9 @@
 
 contract SimpleStorage {
         uint storedData;
-
+ 
+        function set(uint data) public {
+        storedData = data;
+    }
    
 }
