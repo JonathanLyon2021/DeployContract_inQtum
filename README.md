@@ -1,5 +1,7 @@
 # DeployContract_inQtum
 This is Exercise 18 from MI4 in Kingsland Universities Blockchain Developer Program
+###### Don't forget, your **senderaddress** will probably be different from mine. 
+#####Very Important: If you run the set method in client.js, then you have to comment out the get method below it and vise versa. You'll see they are identical methods that are actually copied twice with very slight changes to make them function correctly for their perspective methods. This means that variables with the same name are used over again. You cannot run the file like that. You can only have one variable name per file. ie *const transaction* in get() and  *const transaction* in set(). There can only be one const trnsaction per file. This is towards the very end of the exercise.
 
 # Goals 
 In this exercise, you will deploy a simple Smart Contract in Qtum’s Regtest mode.
