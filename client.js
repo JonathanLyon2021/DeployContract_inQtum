@@ -8,3 +8,5 @@ const fs = require("fs");
 const contractAddress = "1f2bcb283102523a7ced458da6026882d807b88c";
 let ABI = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.abi").toString();
 ABI = JSON.parse(ABI);
+
+const contract = qweb.Contract(contractAddress, ABI);
